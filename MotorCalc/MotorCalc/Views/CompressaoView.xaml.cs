@@ -10,17 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PrincipalView : ContentPage
+    public partial class CompressaoView : ContentPage
     {
-        public PrincipalView()
+        public CompressaoView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.PrincipalVM();
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            //Shell.Current.GoToAsync()
+            BindingContext = new ViewModels.CalculoVM();
         }
     }
 }
