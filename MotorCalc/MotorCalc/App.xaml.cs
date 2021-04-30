@@ -1,5 +1,4 @@
-﻿using MotorCalc.Services;
-using MotorCalc.Views;
+﻿using MotorCalc.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +12,6 @@ namespace MotorCalc
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
