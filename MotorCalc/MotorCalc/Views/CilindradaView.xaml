@@ -14,13 +14,13 @@
                        FontSize="Title"
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" />
-                <Label  Text="0.0"
+                <Label  Text="{Binding Resultado, Mode=TwoWay}"
                         FontSize="80"
                         VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="CenterAndExpand" />
                 <Entry Placeholder="Diametro do pistão" FontSize="Title" Margin="0,0,0,40" Text="{Binding Diametro}"/>
                 <Entry Placeholder="Curso" FontSize="Title" Margin="0,0,0,60" Text="{Binding Curso}"/>
-                <Button Text="Calcular" Margin="40,0,40,0" Command=""/>
+                <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CilindradaCalc}"/>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
