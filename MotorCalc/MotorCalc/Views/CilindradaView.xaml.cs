@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CilindradaView : ContentPage
+    public partial class CilindradaView : Shell
     {
         public CilindradaView()
         {

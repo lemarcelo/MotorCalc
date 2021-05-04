@@ -1,10 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MotorCalc.Views.CilindradaView">
-    <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,20,0,0">
-            <Label Text="249,45" FontSize="50" TextColor="SteelBlue" FontAttributes="Bold" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+<Shell  xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="MotorCalc.Views.CilindradaView"
+        FlyoutBehavior="Disabled"
+       Shell.NavBarIsVisible="False">
+    <ContentPage
+        Visual="Material"
+        Shell.NavBarIsVisible="False">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Label Text="Cilindrada View"
+                       
+                       FontSize="Title"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label  Text="0.0"
+                        FontSize="80"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                <Entry Placeholder="Diametro do pistão" FontSize="Title" Margin="0,0,0,40" Text="{Binding Diametro}"/>
+                <Entry Placeholder="Curso" FontSize="Title" Margin="0,0,0,60" Text="{Binding Curso}"/>
+                <Button Text="Calcular" Margin="40,0,40,0" Command=""/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</Shell>

@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CompressaoView : ContentPage
+    public partial class CompressaoView : Shell
     {
         public CompressaoView()
         {

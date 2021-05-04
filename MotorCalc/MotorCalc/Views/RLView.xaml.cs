@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RLView : ContentPage
+    public partial class RLView : Shell
     {
         public RLView()
         {
-            InitializeComponent()
+            InitializeComponent();
             BindingContext = new ViewModels.CalculoVM();
         }
     }

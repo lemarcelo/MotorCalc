@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PrincipalView : ContentPage
+    public partial class PrincipalView : Shell
     {
         public PrincipalView()
         {

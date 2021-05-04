@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class VMPView : ContentPage
+    public partial class VMPView : Shell
     {
         public VMPView()
         {
