@@ -16,6 +16,8 @@ namespace MotorCalc.Views
         {
             InitializeComponent();
             BindingContext = new ViewModels.CalculoVM();
+            entryDiametro.Text = string.Empty;
+            entryCurso.Text = string.Empty;
         }
     }
 }

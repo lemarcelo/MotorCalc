@@ -11,7 +11,7 @@ namespace MotorCalc.ViewModels
     public class CalculoVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
+        #region Props
         private float _Diametro;
 
         public float Diametro
@@ -51,22 +51,17 @@ namespace MotorCalc.ViewModels
                 OnPropertyChanged();
             }
         }
-
-
         public ICommand CilindradaCalc => new Command( () =>  CilindradaFunc(Diametro, Curso));
+        #endregion
+        public CalculoVM()
+        {
+
+        }
 
         private void CilindradaFunc(double Diametro, double Curso)
         {
-            Resultado = 2;
+            Resultado = Diametro * Diametro * 3.14159 * Curso / 4000;
         }
-
-        public CalculoVM()
-        {
-            Resultado = 0;
-        }
-
-
-
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
