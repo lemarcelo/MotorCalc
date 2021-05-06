@@ -6,11 +6,19 @@
     <ContentPage
         Shell.NavBarIsVisible="False">
         <ContentPage.Content>
-            <StackLayout>
-                <Label Text="Compressao View"
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Label Text="CALCULO Compressão"
                        FontSize="Title"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding Resultado, Mode=TwoWay, StringFormat='{0:F2}' }"
+                       FontSize="80"
+                       TextColor="{StaticResource Primary}"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+                <Entry x:Name="entryDiametro" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
+                <Entry x:Name="entryCurso" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
+                <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CilindradaCalc}"/>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
