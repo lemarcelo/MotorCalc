@@ -41,17 +41,47 @@ namespace MotorCalc.ViewModels
                 OnPropertyChanged();
             }
         }
+        private double _ResultadoCc;
 
-        private double _Resultado;
-
-        public double Resultado
+        public double ResultadoCc
         {
-            get { return _Resultado; }
-            set { _Resultado = value;
+            get { return _ResultadoCc; }
+            set
+            {
+                _ResultadoCc = value;
                 OnPropertyChanged();
             }
         }
-        public ICommand CilindradaCalc => new Command( () =>  CilindradaFunc(Diametro, Curso));
+        private double _Cilindrada;
+
+        public double Cilindrada
+        {
+            get { return _Cilindrada; }
+            set { _Cilindrada = value;
+                OnPropertyChanged();
+            }
+        }
+        private double _Volume;
+
+        public double Volume
+        {
+            get { return _Volume; }
+            set { _Volume = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private double _ResultadoCompr;
+        public double ResultadoCompr
+        {
+            get { return _ResultadoCompr; }
+            set { _ResultadoCompr = value;
+                OnPropertyChanged();
+            }
+        }
+        public ICommand CilindradaCalc => new Command(() => CilindradaFunc(Diametro, Curso));
+        public ICommand CompressaoCalc => new Command(() => CompressaoFunc(Cilindrada, Volume));
+
         #endregion
         public CalculoVM()
         {
@@ -60,7 +90,11 @@ namespace MotorCalc.ViewModels
 
         private void CilindradaFunc(double Diametro, double Curso)
         {
-            Resultado = Diametro * Diametro * 3.14159 * Curso / 4000;
+            ResultadoCc = Diametro * Diametro * 3.14159 * Curso / 4000;
+        }
+        private void CompressaoFunc(double Diametro, double Curso)
+        {
+            ResultadoCompr = (Cilindrada + Volume) / Volume;
         }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
