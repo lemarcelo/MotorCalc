@@ -12,7 +12,6 @@
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Cilindrada" Route="ItemsPage" ContentTemplate="{DataTemplate local:CilindradaView}" />
         <ShellContent Title="Compressao" Route="AboutPage" ContentTemplate="{DataTemplate local:CompressaoView}" />
-        <ShellContent Title="RL" Route="LoginPage" ContentTemplate="{DataTemplate local:RLView}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
