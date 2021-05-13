@@ -20,7 +20,7 @@
                 <Entry x:Name="entryVolume" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume" FontSize="Title" Margin="100,0,100,40" Text="{Binding Volume}"/>
                 <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CompressaoCalc}"/>
                 <StackLayout>
-                    <Button Text="Descobrir Volume" Margin="40,0,40,0" Command="{Binding CompressaoCalc}"/>
+                    <Button Text="Descobrir Volume" Margin="40,0,40,0" Command="{Binding NavegarComprInv}"/>
                 </StackLayout>
             </StackLayout>
         </ContentPage.Content>
