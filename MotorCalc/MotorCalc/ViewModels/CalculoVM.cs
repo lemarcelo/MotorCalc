@@ -81,8 +81,10 @@ namespace MotorCalc.ViewModels
         }
         public ICommand CilindradaCalc => new Command(() => CilindradaFunc(Diametro, Curso));
         public ICommand CompressaoCalc => new Command(() => CompressaoFunc(Cilindrada, Volume));
+
+        ShellNavigationState Atual = Shell.Current.CurrentState;
         public ICommand NavegarComprInv => 
-            new Command(() => Shell.Current.GoToAsync("//comprInv"));
+            new Command(() => Shell.Current.GoToAsync($"{Atual.Location}/comprInv"));
 
         #endregion
         public CalculoVM()

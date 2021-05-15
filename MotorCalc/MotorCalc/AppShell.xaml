@@ -4,7 +4,8 @@
        xmlns:local="clr-namespace:MotorCalc.Views"
        Title="MotorCalc"
        x:Class="MotorCalc.AppShell"
-       Shell.NavBarIsVisible="False">
+       Shell.NavBarIsVisible="False"
+       BackgroundImageSource="sem_limites.jpg">
 
 
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle"  />
