@@ -3,27 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="MotorCalc.Views.CilindradaView"
         FlyoutBehavior="Disabled"
-       Shell.NavBarIsVisible="False"
-        BackgroundColor="Transparent">
+       Shell.NavBarIsVisible="False" BackgroundImageSource="sem_limites.jpg">
     <ContentPage
-        BackgroundColor="Transparent"
         Visual="Material"
         Shell.NavBarIsVisible="False">
         <ContentPage.Content>
-            <StackLayout VerticalOptions="StartAndExpand">
-                <Label Text="CALCULO Cc"
-                       FontSize="Title"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding Resultado, Mode=TwoWay, StringFormat='{0:F2}' }"
-                       FontSize="80"
-                       TextColor="{StaticResource Primary}"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
-                <Entry x:Name="entryDiametro" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
-                <Entry x:Name="entryCurso" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
-                <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CilindradaCalc}"/>
-            </StackLayout>
+            <RelativeLayout
+                RelativeLayout.>
+                <Image Source="sem_limites.jpg" />
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <Label Text="CALCULO Cc"
+                           FontSize="Title"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding Resultado, Mode=TwoWay, StringFormat='{0:F2}' }"
+                           FontSize="80"
+                           TextColor="{StaticResource Primary}"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand" />
+                    <Entry x:Name="entryDiametro" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
+                    <Entry x:Name="entryCurso" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
+                    <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CilindradaCalc}"/>
+                </StackLayout>
+            </RelativeLayout>
         </ContentPage.Content>
     </ContentPage>
 </Shell>
