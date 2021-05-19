@@ -8,8 +8,7 @@
         Visual="Material"
         Shell.NavBarIsVisible="False">
         <ContentPage.Content>
-            <RelativeLayout
-                RelativeLayout.>
+            <RelativeLayout>
                 <Image Source="sem_limites.jpg" />
                 <StackLayout VerticalOptions="StartAndExpand">
                     <Label Text="CALCULO Cc"
