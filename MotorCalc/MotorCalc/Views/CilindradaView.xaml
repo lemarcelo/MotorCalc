@@ -2,29 +2,41 @@
 <Shell  xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="MotorCalc.Views.CilindradaView"
+        xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
         FlyoutBehavior="Disabled"
-       Shell.NavBarIsVisible="False" BackgroundImageSource="sem_limites.jpg">
+       Shell.NavBarIsVisible="False"
+        Visual="Material">
     <ContentPage
         Visual="Material"
         Shell.NavBarIsVisible="False">
         <ContentPage.Content>
-            <RelativeLayout>
-                <Image Source="sem_limites.jpg" />
-                <StackLayout VerticalOptions="StartAndExpand">
-                    <Label Text="CALCULO Cc"
-                           FontSize="Title"
-                           VerticalOptions="CenterAndExpand" 
-                           HorizontalOptions="CenterAndExpand" />
-                    <Label Text="{Binding Resultado, Mode=TwoWay, StringFormat='{0:F2}' }"
-                           FontSize="80"
-                           TextColor="{StaticResource Primary}"
-                           VerticalOptions="CenterAndExpand" 
-                           HorizontalOptions="CenterAndExpand" />
-                    <Entry x:Name="entryDiametro" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
-                    <Entry x:Name="entryCurso" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
-                    <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CilindradaCalc}"/>
-                </StackLayout>
-            </RelativeLayout>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+                    <ffimageloading:CachedImage Margin="10,10,10,10" Source="sem_limites.jpg" >
+                        <ffimageloading:CachedImage.Transformations>
+                            <ffTransformations:BlurredTransformation Radius="30" />
+                            <ffTransformations:CornersTransformation CornersTransformType="AllRounded" />
+                        </ffimageloading:CachedImage.Transformations>
+                    </ffimageloading:CachedImage>
+                    <!--<BoxView HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#60D2B48C" Opacity="0.8"/>-->
+                    <StackLayout Margin="0,30,0,0">
+                        <Label Text="CALCULO Cc"
+                               FontSize="Title"
+                               TextColor="Gray"
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Label Text="{Binding Resultado, Mode=TwoWay, StringFormat='{0:F2}' }"
+                               FontSize="90"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Entry x:Name="entryDiametro" TextColor="Gray" PlaceholderColor="Gray" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
+                        <Entry x:Name="entryCurso" TextColor="Gray" PlaceholderColor="Gray" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
+                        <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CilindradaCalc}"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
         </ContentPage.Content>
     </ContentPage>
 </Shell>

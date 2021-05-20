@@ -12,6 +12,8 @@ namespace MotorCalc.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CilindradaView : Shell
     {
+        //#60D2B48C hexadecimal transparente transparent
+
         public CilindradaView()
         {
             InitializeComponent();
