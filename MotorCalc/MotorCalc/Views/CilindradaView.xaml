@@ -35,7 +35,7 @@
                                HorizontalOptions="CenterAndExpand" />
                         <Entry x:Name="entryDiametro" TextColor="Gray" PlaceholderColor="Gray" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
                         <Entry x:Name="entryCurso" TextColor="Gray" PlaceholderColor="Gray" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
-                        <Button Text="Calcular" Margin="40,90,40,0" Command="{Binding CilindradaCalc}"/>
+                        <Button Text="Calcular" Margin="40,90,40,0" Command="{Binding CilindradaCalc}" />
                     </StackLayout>
                 </Grid>
             </StackLayout>

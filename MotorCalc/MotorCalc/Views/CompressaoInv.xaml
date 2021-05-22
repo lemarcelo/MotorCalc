@@ -6,10 +6,12 @@
         Shell.NavBarIsVisible="False">
         <ContentPage.Content>
             <StackLayout VerticalOptions="StartAndExpand">
-                <Label Text="CALCULO Compressão"
-                       FontSize="Title"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
+                <Label  Text="CALCULO Compressão"
+                        TextColor="Black"
+                        FontSize="30"
+                        FontAttributes="Bold"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
                 <Label Text="{Binding ResultadoCompr, Mode=TwoWay, StringFormat='{0:F2}' }"
                        FontSize="80"
                        TextColor="{StaticResource Primary}"
