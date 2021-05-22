@@ -89,7 +89,7 @@ namespace MotorCalc.ViewModels
         #endregion
         public CalculoVM()
         {
-
+            ResultadoCc = 0;
         }
 
         private void CilindradaFunc(double Diametro, double Curso)
