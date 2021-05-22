@@ -21,5 +21,6 @@ namespace MotorCalc.Views
             entryDiametro.Text = string.Empty;
             entryCurso.Text = string.Empty;
         }
+
     }
 }
