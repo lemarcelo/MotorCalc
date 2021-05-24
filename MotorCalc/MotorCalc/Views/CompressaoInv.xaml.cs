@@ -16,6 +16,7 @@ namespace MotorCalc.Views
         {
             InitializeComponent();
             BindingContext = new ViewModels.CalculoVM();
+            lblResultadoCompr.Text = "--";
         }
     }
 }

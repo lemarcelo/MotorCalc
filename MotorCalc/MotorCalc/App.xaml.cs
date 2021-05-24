@@ -13,8 +13,6 @@ namespace MotorCalc
             InitializeComponent();
 
             MainPage = new AppShell();
-            Routing.RegisterRoute("comprInv", typeof(CompressaoInv));
-
         }
 
         protected override void OnStart()

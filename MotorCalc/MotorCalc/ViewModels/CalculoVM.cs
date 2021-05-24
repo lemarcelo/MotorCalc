@@ -81,24 +81,33 @@ namespace MotorCalc.ViewModels
         }
         public ICommand CilindradaCalc => new Command(() => CilindradaFunc(Diametro, Curso));
         public ICommand CompressaoCalc => new Command(() => CompressaoFunc(Cilindrada, Volume));
+        public ICommand VolumeCalc
+            =>
+            new Command(() => Shell.Current.GoToAsync($"{Atual.Location}/volume"));
+
 
         ShellNavigationState Atual = Shell.Current.CurrentState;
-        public ICommand NavegarComprInv => 
-            new Command(() => Shell.Current.GoToAsync($"{Atual.Location}/comprInv"));
 
         #endregion
         public CalculoVM()
         {
-            ResultadoCc = 0;
+
         }
 
         private void CilindradaFunc(double Diametro, double Curso)
         {
             ResultadoCc = Diametro * Diametro * 3.14159 * Curso / 4000;
         }
-        private void CompressaoFunc(double Diametro, double Curso)
+        private void CompressaoFunc(double Cilindrada, double Volume)
         {
-            ResultadoCompr = (Cilindrada + Volume) / Volume;
+            if (Cilindrada < 1 || Volume < 1)
+            {
+                ResultadoCompr = 0;
+            }
+            else
+            {
+                ResultadoCompr = (Cilindrada + Volume) / Volume;
+            }
         }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)

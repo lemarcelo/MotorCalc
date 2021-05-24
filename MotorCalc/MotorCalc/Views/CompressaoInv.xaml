@@ -12,7 +12,7 @@
                         FontAttributes="Bold"
                         VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding ResultadoCompr, Mode=TwoWay, StringFormat='{0:F2}' }"
+                <Label x:Name="lblResultadoCompr" Text="{Binding ResultadoCompr, Mode=TwoWay, StringFormat='{00:00}' }"
                        FontSize="80"
                        TextColor="{StaticResource Primary}"
                        VerticalOptions="CenterAndExpand" 

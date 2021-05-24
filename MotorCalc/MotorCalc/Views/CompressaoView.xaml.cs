@@ -18,6 +18,12 @@ namespace MotorCalc.Views
             BindingContext = new ViewModels.CalculoVM();
             entryCilindrada.Text = string.Empty;
             entryVolume.Text = string.Empty;
+            lblResultadoCompr.Text = "--";
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.DisplayAlert("Alerta!", "Em Desenvolvimento...", "Ok");
         }
     }
 }

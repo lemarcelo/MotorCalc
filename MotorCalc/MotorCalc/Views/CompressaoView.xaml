@@ -3,26 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MotorCalc.Views.CompressaoView"
        Shell.NavBarIsVisible="False">
-    <ContentPage
-        Shell.NavBarIsVisible="False">
+    <ContentPage    Shell.NavBarIsVisible="False">
         <ContentPage.Content>
-            <StackLayout VerticalOptions="StartAndExpand">
+            <Frame CornerRadius="10" Margin="20,20,20,35" BackgroundColor="#CC708090" >
+                <StackLayout VerticalOptions="StartAndExpand">
                 <Label Text="CALCULO Compressão"
-                       FontSize="Title"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding ResultadoCompr, Mode=TwoWay, StringFormat='{0:F2}' }"
-                       FontSize="80"
-                       TextColor="{StaticResource Primary}"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
+                       FontSize="30"
+                               FontAttributes="Bold"
+                               TextColor="NavajoWhite"
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding ResultadoCompr, Mode=TwoWay, StringFormat='{00:00}' }"
+                           x:Name="lblResultadoCompr"
+                           FontSize="80"
+                           TextColor="White"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand" />
                 <Entry x:Name="entryCilindrada" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Margin="100,0,100,20" Text="{Binding Cilindrada}"/>
                 <Entry x:Name="entryVolume" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume" FontSize="Title" Margin="100,0,100,40" Text="{Binding Volume}"/>
-                <Button Text="Calcular" Margin="40,0,40,0" Command="{Binding CompressaoCalc}"/>
-                <StackLayout>
-                    <Button Text="Descobrir Volume" Margin="40,0,40,0" Command="{Binding NavegarComprInv}"/>
+                <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Calcular" Margin="40,0,40,0" Command="{Binding CompressaoCalc}"/>
+                <StackLayout Margin="60">
+                        <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Descobrir Volume" Margin="40,0,40,0" Clicked="Button_Clicked" />
+                        <!--Command="{Binding VolumeCalc}"-->
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
+            </Frame>
         </ContentPage.Content>
     </ContentPage>
 </Shell>

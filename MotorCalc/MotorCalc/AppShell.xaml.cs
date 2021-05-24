@@ -10,11 +10,8 @@ namespace MotorCalc
         public AppShell()
         {
             InitializeComponent();
-        }
+            Routing.RegisterRoute("volume", typeof(CompressaoInv));
 
-        private async void OnMenuItemClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//PrincipalView");
         }
     }
 }
