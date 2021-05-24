@@ -13,12 +13,12 @@
         <ContentPage.Content>
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
-                    <!--<ffimageloading:CachedImage Margin="10,10,10,10" Source="sem_limites.png" >
+                    <ffimageloading:CachedImage Margin="10,10,10,10" Source="sem_limites.png" >
                         <ffimageloading:CachedImage.Transformations>
                             <ffTransformations:BlurredTransformation Radius="30" />
                             <ffTransformations:CornersTransformation CornersTransformType="AllRounded" />
                         </ffimageloading:CachedImage.Transformations>
-                    </ffimageloading:CachedImage>-->
+                    </ffimageloading:CachedImage>
                     <!--<BoxView HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#60D2B48C" Opacity="0.8"/>-->
                     <StackLayout Margin="0,30,0,0">
                         <Label Text="CALCULO Cc"
@@ -28,7 +28,7 @@
                                TextColor="Black"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand" />
-                        <Label Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{0:F2}' }"
+                        <Label Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{F2:0}' }"
                                FontSize="90"
                                TextColor="Gray"
                                VerticalOptions="CenterAndExpand" 
