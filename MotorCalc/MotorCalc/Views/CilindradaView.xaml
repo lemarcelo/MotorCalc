@@ -28,9 +28,9 @@
                                x:Name="lbl1"
                                FontAttributes="Bold"
                                TextColor="NavajoWhite"
-                               VerticalOptions="CenterAndExpand" 
+                               VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{00:00}' }"
+                        <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{0:####.##}' }"
                                FontSize="90"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
