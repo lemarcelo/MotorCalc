@@ -12,7 +12,7 @@ namespace MotorCalc
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new PrincipalView();
         }
 
         protected override void OnStart()

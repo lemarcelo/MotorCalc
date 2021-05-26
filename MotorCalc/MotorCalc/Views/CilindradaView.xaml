@@ -13,15 +13,6 @@
         <ContentPage.Content>
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
-                <!--<Grid HorizontalOptions="Fill" VerticalOptions="Fill"
-                      BackgroundColor="Gray" Margin="10,10,10,10">-->
-                    <!--<ffimageloading:CachedImage Margin="10,10,10,10" Source="sem_limites.png" >
-                        <ffimageloading:CachedImage.Transformations>
-                            <ffTransformations:BlurredTransformation Radius="30" />
-                            <ffTransformations:CornersTransformation CornersTransformType="AllRounded" />
-                        </ffimageloading:CachedImage.Transformations>
-                    </ffimageloading:CachedImage>-->
-                    <!--<BoxView HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#60D2B48C" Opacity="0.8"/>-->
                     <StackLayout Margin="0,0,0,0">
                         <Label Text="CALCULO Cc"
                                FontSize="30"
@@ -35,8 +26,8 @@
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand" />
-                        <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="Gray" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
-                        <Entry x:Name="entryCurso" TextColor="NavajoWhite" PlaceholderColor="Gray" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
+                        <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
+                        <Entry x:Name="entryCurso" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
                         <Button Text="Calcular" BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Margin="40,90,40,0" Command="{Binding CilindradaCalc}" />
                     </StackLayout>
                 </Frame>

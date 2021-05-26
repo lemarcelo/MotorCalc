@@ -19,8 +19,8 @@
                            TextColor="White"
                            VerticalOptions="CenterAndExpand" 
                            HorizontalOptions="CenterAndExpand" />
-                    <Entry x:Name="entryCilindrada" TextColor="NavajoWhite" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Margin="100,0,100,20" Text="{Binding Cilindrada}"/>
-                    <Entry x:Name="entryVolume" TextColor="NavajoWhite" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume" FontSize="Title" Margin="100,0,100,40" Text="{Binding Volume}"/>
+                    <Entry x:Name="entryCilindrada" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Margin="100,0,100,20" Text="{Binding Cilindrada}"/>
+                    <Entry x:Name="entryVolume" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume" FontSize="Title" Margin="100,0,100,40" Text="{Binding Volume}"/>
                 <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Calcular" Margin="40,0,40,0" Command="{Binding CompressaoCalc}"/>
                 <StackLayout Margin="60">
                         <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Descobrir Volume" Margin="40,0,40,0" Clicked="Button_Clicked" />

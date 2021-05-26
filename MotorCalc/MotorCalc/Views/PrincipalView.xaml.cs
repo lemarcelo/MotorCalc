@@ -16,11 +16,8 @@ namespace MotorCalc.Views
         {
             InitializeComponent();
             BindingContext = new ViewModels.PrincipalVM();
-        }
+            Routing.RegisterRoute("volume", typeof(CompressaoInv));
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            //Shell.Current.GoToAsync()
         }
     }
 }

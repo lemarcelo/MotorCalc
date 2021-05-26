@@ -10,8 +10,6 @@ namespace MotorCalc
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute("volume", typeof(CompressaoInv));
-
         }
     }
 }
