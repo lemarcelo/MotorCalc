@@ -1,29 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace MotorCalc.Views
+namespace MotorCalc.Services
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CilindradaView : Shell
+    public class Converter : IValueConverter
     {
-        //#60D2B48C hexadecimal transparente transparent
-
-        public CilindradaView()
-        {
-            InitializeComponent();
-            BindingContext = new ViewModels.CalculoVM();
-            entryDiametro.Text = string.Empty;
-            entryCurso.Text = string.Empty;
-            //lblResultadoCc.Text = "--";
-        }
-
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is double val && val >= 1)
@@ -41,6 +25,3 @@ namespace MotorCalc.Views
             }
             return value;
         }
-
-    }
-}

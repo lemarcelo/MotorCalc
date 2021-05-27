@@ -11,28 +11,27 @@
         Visual="Material"
         Shell.NavBarIsVisible="False">
         <ContentPage.Content>
-            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
-                    <StackLayout Margin="0,0,0,0">
-                        <Label Text="CALCULO Cc"
+            <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
+                <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                    <Label Text="CALCULO Cc"
                                FontSize="30"
                                x:Name="lbl1"
                                FontAttributes="Bold"
                                TextColor="NavajoWhite"
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand" />
-                        <Entry x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{0:#,0.0}' }"
+                    <!--StringFormat='{0:#,0.0}'-->
+                        <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay }"
                                FontSize="90"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand" />
-                        <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Margin="100,0,100,20" Text="{Binding Diametro}"/>
-                        <Entry x:Name="entryCurso" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Margin="100,0,100,40" Text="{Binding Curso}"/>
-                        <Button Text="Calcular" BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Margin="40,90,40,0" Command="{Binding CilindradaCalc}" />
+                        <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Text="{Binding Diametro}"/>
+                        <Entry x:Name="entryCurso" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Text="{Binding Curso}"/>
+                        <Button Text="Calcular" BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Margin="20,20,20,20" Command="{Binding CilindradaCalc}" />
                     </StackLayout>
-                </Frame>
                 <!--</Grid>-->
-            </StackLayout>
+            </Frame>
         </ContentPage.Content>
     </ContentPage>
 </Shell>
