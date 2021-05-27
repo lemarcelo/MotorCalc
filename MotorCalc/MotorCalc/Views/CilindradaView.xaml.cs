@@ -20,7 +20,7 @@ namespace MotorCalc.Views
             BindingContext = new ViewModels.CalculoVM();
             entryDiametro.Text = string.Empty;
             entryCurso.Text = string.Empty;
-            lblResultadoCc.Text = "--";
+            //lblResultadoCc.Text = "--";
         }
 
     }

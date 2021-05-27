@@ -21,7 +21,7 @@
                                TextColor="NavajoWhite"
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand" />
-                        <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{0:####.##}' }"
+                        <Entry x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, StringFormat='{0:#,0.0}' }"
                                FontSize="90"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 

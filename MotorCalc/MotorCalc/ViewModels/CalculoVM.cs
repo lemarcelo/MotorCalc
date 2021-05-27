@@ -12,9 +12,9 @@ namespace MotorCalc.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         #region Props
-        private float _Diametro;
+        private double _Diametro;
 
-        public float Diametro
+        public double Diametro
         {
             get { return _Diametro; }
             set { _Diametro = value;
@@ -22,9 +22,9 @@ namespace MotorCalc.ViewModels
             }
         }
 
-        private float _Curso;
+        private double _Curso;
 
-        public float Curso
+        public double Curso
         {
             get { return _Curso; }
             set { _Curso = value;
@@ -91,7 +91,7 @@ namespace MotorCalc.ViewModels
         #endregion
         public CalculoVM()
         {
-
+            ResultadoCc = 249.45;
         }
 
         private void CilindradaFunc(double Diametro, double Curso)
