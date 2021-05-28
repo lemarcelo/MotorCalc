@@ -2,6 +2,7 @@
 <Shell  xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="MotorCalc.Views.CilindradaView"
+        xmlns:converter="clr-namespace:MotorCalc.Services"
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
         xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
         FlyoutBehavior="Disabled"
@@ -10,6 +11,11 @@
     <ContentPage
         Visual="Material"
         Shell.NavBarIsVisible="False">
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <converter:Conv x:Key="DoubleConverter"/>
+            </ResourceDictionary>
+        </ContentPage.Resources>
         <ContentPage.Content>
             <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
                 <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
@@ -21,7 +27,7 @@
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand" />
                     <!--StringFormat='{0:#,0.0}'-->
-                        <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay }"
+                    <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, Converter={StaticResource DoubleConverter}}"
                                FontSize="90"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 

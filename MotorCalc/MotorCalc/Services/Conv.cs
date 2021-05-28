@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace MotorCalc.Services
 {
-    public class Converter : IValueConverter
+    public class Conv : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -25,3 +25,5 @@ namespace MotorCalc.Services
             }
             return value;
         }
+    }
+}
