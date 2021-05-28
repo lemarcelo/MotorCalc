@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MotorCalc.Views.CompressaoView"
+<Shell  xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="MotorCalc.Views.CompressaoView"        
+        xmlns:behavior="clr-namespace:MotorCalc.Behaviors"
        Shell.NavBarIsVisible="False">
     <ContentPage    Shell.NavBarIsVisible="False">
         <ContentPage.Content>
@@ -13,12 +14,16 @@
                                TextColor="NavajoWhite"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand" />
-                    <Label Text="{Binding ResultadoCompr, Mode=TwoWay, StringFormat='{0:####.##}' }"
-                           x:Name="lblResultadoCompr"
+                    <Label x:Name="lblResultadoCompr"
                            FontSize="90"
                            TextColor="White"
                            VerticalOptions="CenterAndExpand" 
-                           HorizontalOptions="CenterAndExpand" />
+                           HorizontalOptions="CenterAndExpand" >
+
+                        <Label.Behaviors>
+                            <behavior:FloatingAmountBehavior Text="{Binding ResultadoCompr, Mode=TwoWay}"/>
+                        </Label.Behaviors>
+                    </Label>
                     <Entry x:Name="entryCilindrada" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Text="{Binding Cilindrada}"/>
                     <Entry x:Name="entryVolume" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume da Camara" FontSize="Title" Text="{Binding Volume}"/>
                     <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Calcular" Margin="20,20,20,20" Command="{Binding CompressaoCalc}"/>

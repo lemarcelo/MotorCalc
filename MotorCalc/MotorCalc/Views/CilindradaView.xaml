@@ -2,7 +2,7 @@
 <Shell  xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="MotorCalc.Views.CilindradaView"
-        xmlns:converter="clr-namespace:MotorCalc.Services"
+        xmlns:behavior="clr-namespace:MotorCalc.Behaviors"
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
         xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
         FlyoutBehavior="Disabled"
@@ -11,11 +11,6 @@
     <ContentPage
         Visual="Material"
         Shell.NavBarIsVisible="False">
-        <ContentPage.Resources>
-            <ResourceDictionary>
-                <converter:Conv x:Key="DoubleConverter"/>
-            </ResourceDictionary>
-        </ContentPage.Resources>
         <ContentPage.Content>
             <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
                 <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
@@ -27,11 +22,16 @@
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand" />
                     <!--StringFormat='{0:#,0.0}'-->
-                    <Label x:Name="lblResultadoCc" Text="{Binding ResultadoCc, Mode=TwoWay, Converter={StaticResource DoubleConverter}}"
+                    <Label x:Name="lblResultadoCc"
                                FontSize="90"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
-                               HorizontalOptions="CenterAndExpand" />
+                               HorizontalOptions="CenterAndExpand" >
+
+                        <Label.Behaviors>
+                            <behavior:FloatingAmountBehavior Text="{Binding ResultadoCc, Mode=TwoWay}"/>
+                        </Label.Behaviors>
+                    </Label>
                         <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Text="{Binding Diametro}"/>
                         <Entry x:Name="entryCurso" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Text="{Binding Curso}"/>
                         <Button Text="Calcular" BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Margin="20,20,20,20" Command="{Binding CilindradaCalc}" />

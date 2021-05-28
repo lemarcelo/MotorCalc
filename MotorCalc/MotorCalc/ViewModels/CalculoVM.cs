@@ -96,7 +96,14 @@ namespace MotorCalc.ViewModels
 
         private void CilindradaFunc(double Diametro, double Curso)
         {
-            ResultadoCc = Diametro * Diametro * 3.14159 * Curso / 4000;
+            try
+            {
+                ResultadoCc = Diametro * Diametro * 3.14159 * Curso / 4000;
+            }
+            catch (Exception e)
+            {
+                App.Current.MainPage.DisplayAlert("Erro", $"{e.Message}", "Ok");
+            }
         }
         private void CompressaoFunc(double Cilindrada, double Volume)
         {
