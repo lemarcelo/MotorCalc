@@ -4,6 +4,7 @@
         x:Class="MotorCalc.Views.CilindradaView"
         xmlns:behavior="clr-namespace:MotorCalc.Behaviors"
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        xmlns:controllers="clr-namespace:MotorCalc.Controllers"
         xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
         FlyoutBehavior="Disabled"
        Shell.NavBarIsVisible="False"
@@ -21,20 +22,45 @@
                                TextColor="NavajoWhite"
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand" />
+                    
                     <!--StringFormat='{0:#,0.0}'-->
                     <Label x:Name="lblResultadoCc"
                                FontSize="90"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
-                               HorizontalOptions="CenterAndExpand" >
-
+                               HorizontalOptions="CenterAndExpand">
+                        
                         <Label.Behaviors>
-                            <behavior:DoubleBehavior Text="{Binding ResultadoCc, Mode=TwoWay}"/>
+                            <behavior:DoubleBehavior Text="{Binding ResultadoCc, Mode=TwoWay}" />
                         </Label.Behaviors>
                     </Label>
-                        <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Text="{Binding Diametro}"/>
-                        <Entry x:Name="entryCurso" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Curso" FontSize="Title" Text="{Binding Curso}"/>
-                        <Button Text="Calcular" BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Margin="20,20,20,20" Command="{Binding CilindradaCalc}" />
+                    <controllers:NumericEntry x:Name="entryDiametro" 
+                               TextColor="NavajoWhite" 
+                               PlaceholderColor="White" 
+                               HorizontalTextAlignment="Center" 
+                               FontAttributes="Bold" 
+                               Placeholder="Diametro do pistão" 
+                               FontSize="Title" 
+                               Text="{Binding Diametro}" />
+
+                    <controllers:NumericEntry x:Name="entryCurso" 
+                               TextColor="NavajoWhite" 
+                               PlaceholderColor="White" 
+                               HorizontalTextAlignment="Center" 
+                               FontAttributes="Bold" 
+                               Placeholder="Curso" 
+                               FontSize="Title" 
+                               Text="{Binding Curso}" />
+
+                    <Button Text="Calcular" 
+                                BackgroundColor="GhostWhite" 
+                                TextColor="Gray" 
+                                BorderColor="Black" 
+                                BorderWidth="2" 
+                                CornerRadius="10" 
+                                Margin="20,20,20,20" 
+                                Command="{Binding CilindradaCalc}" />
+                    
                     </StackLayout>
                 <!--</Grid>-->
             </Frame>

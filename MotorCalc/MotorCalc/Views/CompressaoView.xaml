@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Shell  xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="MotorCalc.Views.CompressaoView"        
+        x:Class="MotorCalc.Views.CompressaoView"
         xmlns:behavior="clr-namespace:MotorCalc.Behaviors"
        Shell.NavBarIsVisible="False">
     <ContentPage    Shell.NavBarIsVisible="False">
+
         <ContentPage.Content>
             <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
                 <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
@@ -24,10 +25,42 @@
                             <behavior:DoubleBehavior Text="{Binding ResultadoCompr, Mode=TwoWay}"/>
                         </Label.Behaviors>
                     </Label>
-                    <Entry x:Name="entryCilindrada" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Text="{Binding Cilindrada}"/>
-                    <Entry x:Name="entryVolume" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Volume da Camara" FontSize="Title" Text="{Binding Volume}"/>
-                    <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Calcular" Margin="20,20,20,20" Command="{Binding CompressaoCalc}"/>
-                    <Button BackgroundColor="GhostWhite" TextColor="Gray" BorderColor="Black" BorderWidth="2" CornerRadius="10" Text="Descobrir Volume" Margin="40,0,40,0" Clicked="Button_Clicked" />
+                    <Entry x:Name="entryCilindrada" 
+                           TextColor="NavajoWhite" 
+                           PlaceholderColor="White" 
+                           HorizontalTextAlignment="Center" 
+                           FontAttributes="Bold" 
+                           Keyboard="Numeric" 
+                           Placeholder="Cilindrada" 
+                           FontSize="Title" 
+                           Text="{Binding Cilindrada}"/>
+                    
+                    <Entry x:Name="entryVolume" 
+                           TextColor="NavajoWhite" 
+                           PlaceholderColor="White" 
+                           HorizontalTextAlignment="Center" 
+                           FontAttributes="Bold" 
+                           Keyboard="Numeric"
+                           Placeholder="Volume da Camara" 
+                           FontSize="Title" 
+                           Text="{Binding Volume}"/>
+                    
+                    <Button BackgroundColor="GhostWhite" 
+                            TextColor="Gray" 
+                            BorderColor="Black" 
+                            BorderWidth="2" 
+                            CornerRadius="10" Text="Calcular" 
+                            Margin="20,20,20,20" 
+                            Command="{Binding CompressaoCalc}"/>
+                    
+                    <Button BackgroundColor="GhostWhite" 
+                            TextColor="Gray" 
+                            BorderColor="Black" 
+                            BorderWidth="2" 
+                            CornerRadius="10" 
+                            Text="Descobrir Volume" 
+                            Margin="40,0,40,0" 
+                            Clicked="Button_Clicked" />
                         <!--Command="{Binding VolumeCalc}"-->
                 </StackLayout>
             </Frame>

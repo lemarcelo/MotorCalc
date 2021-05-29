@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using Xamarin.Forms;
 
@@ -8,7 +9,6 @@ namespace MotorCalc.Behaviors
     public class DoubleBehavior : Behavior<Label>
     {   
         public static readonly BindableProperty TextProperty = BindableProperty.Create("Text", typeof(double), typeof(DoubleBehavior), null, propertyChanged: OnNumberChanged);
-
         public double Text
         {
             get { return (double)GetValue(TextProperty); }
@@ -26,7 +26,7 @@ namespace MotorCalc.Behaviors
             }
 
             var number = behavior.Text.ToString();
-            var decimalValue = number.Substring(number.IndexOf(","));
+            var decimalValue = CultureInfo.CurrentCulture.Name == "en-US" ? number.Substring(number.IndexOf(".")) : number.Substring(number.IndexOf(","));
             var fs = new FormattedString();
 
             fs.Spans.Add(new Span { Text = behavior.Text.ToString("N0"), FontSize = behavior.AssociatedObject.FontSize });
