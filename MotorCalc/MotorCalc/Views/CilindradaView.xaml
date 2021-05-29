@@ -29,7 +29,7 @@
                                HorizontalOptions="CenterAndExpand" >
 
                         <Label.Behaviors>
-                            <behavior:FloatingAmountBehavior Text="{Binding ResultadoCc, Mode=TwoWay}"/>
+                            <behavior:DoubleBehavior Text="{Binding ResultadoCc, Mode=TwoWay}"/>
                         </Label.Behaviors>
                     </Label>
                         <Entry x:Name="entryDiametro" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Diametro do pistão" FontSize="Title" Text="{Binding Diametro}"/>

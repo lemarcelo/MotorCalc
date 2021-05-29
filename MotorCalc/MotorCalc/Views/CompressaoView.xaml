@@ -21,7 +21,7 @@
                            HorizontalOptions="CenterAndExpand" >
 
                         <Label.Behaviors>
-                            <behavior:FloatingAmountBehavior Text="{Binding ResultadoCompr, Mode=TwoWay}"/>
+                            <behavior:DoubleBehavior Text="{Binding ResultadoCompr, Mode=TwoWay}"/>
                         </Label.Behaviors>
                     </Label>
                     <Entry x:Name="entryCilindrada" TextColor="NavajoWhite" PlaceholderColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" Keyboard="Numeric" Placeholder="Cilindrada" FontSize="Title" Text="{Binding Cilindrada}"/>

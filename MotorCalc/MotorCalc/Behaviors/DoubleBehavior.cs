@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace MotorCalc.Behaviors
 {
-    public class FloatingAmountBehavior : Behavior<Label>
+    public class DoubleBehavior : Behavior<Label>
     {   
-        public static readonly BindableProperty TextProperty = BindableProperty.Create("Text", typeof(double), typeof(FloatingAmountBehavior), null, propertyChanged: OnNumberChanged);
+        public static readonly BindableProperty TextProperty = BindableProperty.Create("Text", typeof(double), typeof(DoubleBehavior), null, propertyChanged: OnNumberChanged);
 
         public double Text
         {
@@ -19,17 +19,17 @@ namespace MotorCalc.Behaviors
 
         static void OnNumberChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            var behavior = (FloatingAmountBehavior)bindable;
+            var behavior = (DoubleBehavior)bindable;
             if (behavior.AssociatedObject == null)
             {
                 return;
             }
 
             var number = behavior.Text.ToString();
-            var decimalValue = number.Substring(number.IndexOf("."));
+            var decimalValue = number.Substring(number.IndexOf(","));
             var fs = new FormattedString();
 
-            fs.Spans.Add(new Span { Text = behavior.Text.ToString("C0"), FontSize = behavior.AssociatedObject.FontSize });
+            fs.Spans.Add(new Span { Text = behavior.Text.ToString("N0"), FontSize = behavior.AssociatedObject.FontSize });
             fs.Spans.Add(new Span { Text = decimalValue.Length > 2 ? decimalValue.Substring(0, 3) : decimalValue, FontSize = behavior.AssociatedObject.FontSize / 2 + 1 });
 
             behavior.AssociatedObject.VerticalTextAlignment = TextAlignment.Start;
