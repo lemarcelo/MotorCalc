@@ -50,7 +50,7 @@
                                FontAttributes="Bold" 
                                Placeholder="Curso" 
                                FontSize="Title" 
-                               NumericValue="{Binding Curso}" />
+                               Text="{Binding Curso}" />
 
                     <Button Text="Calcular" 
                                 BackgroundColor="GhostWhite" 
