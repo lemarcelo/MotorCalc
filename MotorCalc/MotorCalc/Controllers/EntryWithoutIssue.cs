@@ -40,8 +40,8 @@ namespace MotorCalc.Controllers
         public NumericEntry()
         {
             Keyboard = Keyboard.Numeric;
-            //Focused += OnFocused;
-            //Unfocused += OnUnfocused;
+            Focused += OnFocused;
+            Unfocused += OnUnfocused;
         }
         #endregion
 
@@ -54,7 +54,8 @@ namespace MotorCalc.Controllers
         private void OnUnfocused(object sender, FocusEventArgs e)
         {
             var numberFormant = CultureInfo.InvariantCulture.NumberFormat;
-            var _text = Text.Replace(numberFormant.NumberGroupSeparator, string.Empty).Replace(numberFormant.NumberDecimalSeparator, ",");
+            //.Replace(numberFormant.NumberGroupSeparator, string.Empty)
+            var _text = Text.Replace(numberFormant.NumberDecimalSeparator, ".");
 
             if (decimal.TryParse(_text, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal numericValue))
             {

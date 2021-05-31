@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using MotorCalc.Models;
 
 namespace MotorCalc.ViewModels
 {
@@ -94,10 +95,12 @@ namespace MotorCalc.ViewModels
             //ResultadoCc = 249.45;
         }
 
+
         private void CilindradaFunc(double Diametro, double Curso)
         {
+            Medida medida = new Medida();
             try
-            {
+            {    
                 ResultadoCc = Diametro * Diametro * 3.14159 * Curso / 4000;
             }
             catch (Exception e)

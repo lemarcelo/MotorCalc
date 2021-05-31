@@ -39,18 +39,18 @@
                                PlaceholderColor="White" 
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
-                               Placeholder="Diametro do pistão" 
+                               Placeholder="Diametro do pistão"
                                FontSize="Title" 
                                Text="{Binding Diametro}" />
 
                     <controllers:NumericEntry x:Name="entryCurso" 
                                TextColor="NavajoWhite" 
-                               PlaceholderColor="White" 
+                               PlaceholderColor="White"
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
                                Placeholder="Curso" 
                                FontSize="Title" 
-                               Text="{Binding Curso}" />
+                               NumericValue="{Binding Curso}" />
 
                     <Button Text="Calcular" 
                                 BackgroundColor="GhostWhite" 
