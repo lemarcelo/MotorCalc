@@ -23,23 +23,38 @@ namespace MotorCalc.Views
             //lblResultadoCc.Text = "--";
         }
 
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            if (value is double val && val >= 1)
+
+            try
             {
-                return decimal.Round((decimal)val, 2, MidpointRounding.AwayFromZero);
+                lblResultadoCc = double.Parse(entryDiametro.Text) * double.Parse(entryDiametro.Text) * 3.14159 * entryCurso / 4000;
             }
-            return value;
+            catch (Exception e)
+            {
+                App.Current.MainPage.DisplayAlert("Erro", $"{e.Message}", "Ok");
+            }
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (value is double val && val > 0)
-            {
-                return decimal.Round((decimal)val, 2, MidpointRounding.AwayFromZero);
-            }
-            return value;
-        }
+
+
+        //public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        //{
+        //    if (value is double val && val >= 1)
+        //    {
+        //        return decimal.Round((decimal)val, 2, MidpointRounding.AwayFromZero);
+        //    }
+        //    return value;
+        //}
+
+        //public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        //{
+        //    if (value is double val && val > 0)
+        //    {
+        //        return decimal.Round((decimal)val, 2, MidpointRounding.AwayFromZero);
+        //    }
+        //    return value;
+        //}
 
     }
 }
