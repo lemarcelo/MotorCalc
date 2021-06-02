@@ -34,23 +34,26 @@
                             <behavior:DoubleBehavior Text="{Binding ResultadoCc, Mode=TwoWay}" />
                         </Label.Behaviors>
                     </Label>
-                    <controllers:NumericEntry x:Name="entryDiametro" 
+                    <Entry     Keyboard="Numeric"
+                               x:Name="entryDiametro" 
                                TextColor="NavajoWhite" 
                                PlaceholderColor="White" 
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
                                Placeholder="Diametro do pistão"
                                FontSize="Title" 
-                               Text="{Binding medida.Diametro}" />
+                               />
+                    <!--Text="{Binding medida.Diametro}"-->
 
-                    <controllers:NumericEntry x:Name="entryCurso" 
+                    <Entry     Keyboard="Numeric"
+                               x:Name="entryCurso" 
                                TextColor="NavajoWhite" 
                                PlaceholderColor="White"
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
                                Placeholder="Curso" 
-                               FontSize="Title" 
-                               NumericValue="{Binding medida.Curso}" />
+                               FontSize="Title" />
+                    <!--NumericValue="{Binding medida.Curso}"-->
 
                     <Button Text="Calcular" 
                                 BackgroundColor="GhostWhite" 

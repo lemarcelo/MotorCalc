@@ -54,8 +54,7 @@ namespace MotorCalc.Controllers
         private void OnUnfocused(object sender, FocusEventArgs e)
         {
             var numberFormant = CultureInfo.InvariantCulture.NumberFormat;
-            //.Replace(numberFormant.NumberGroupSeparator, string.Empty)
-            var _text = Text.Replace(numberFormant.NumberDecimalSeparator, ".");
+            var _text = Text.Replace(numberFormant.NumberDecimalSeparator, ".").Replace(numberFormant.NumberGroupSeparator, string.Empty);
 
             if (decimal.TryParse(_text, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal numericValue))
             {

@@ -28,11 +28,14 @@ namespace MotorCalc.Views
 
             try
             {
-                lblResultadoCc = double.Parse(entryDiametro.Text) * double.Parse(entryDiametro.Text) * 3.14159 * entryCurso / 4000;
+                double diametro = double.Parse(entryDiametro.Text);
+                double curso = double.Parse(entryCurso.Text);
+                
+                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                App.Current.MainPage.DisplayAlert("Erro", $"{e.Message}", "Ok");
+                App.Current.MainPage.DisplayAlert("Erro", $"{ex.Message}", "Ok");
             }
         }
 
