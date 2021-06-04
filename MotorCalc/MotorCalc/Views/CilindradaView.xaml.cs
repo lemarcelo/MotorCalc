@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MotorCalc.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace MotorCalc.Views
     public partial class CilindradaView : Shell
     {
         //#60D2B48C hexadecimal transparente transparent
-
+        CalculoVM CalcVM{ get; set; }
         public CilindradaView()
         {
             InitializeComponent();
@@ -25,13 +26,12 @@ namespace MotorCalc.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
+            CalcVM = new CalculoVM();
             try
             {
                 double diametro = double.Parse(entryDiametro.Text);
                 double curso = double.Parse(entryCurso.Text);
-                
-                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString();
+                CalcVM.ResultadoCc = diametro * diametro * 3.14159 * curso / 4000;
             }
             catch (Exception ex)
             {
