@@ -31,7 +31,7 @@ namespace MotorCalc.Views
             {
                 double diametro = double.Parse(entryDiametro.Text);
                 double curso = double.Parse(entryCurso.Text);
-                CalcVM.ResultadoCc = diametro * diametro * 3.14159 * curso / 4000;
+                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString("##.#");
             }
             catch (Exception ex)
             {
