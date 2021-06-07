@@ -21,22 +21,25 @@ namespace MotorCalc.Views
             BindingContext = new ViewModels.CalculoVM();
             entryDiametro.Text = string.Empty;
             entryCurso.Text = string.Empty;
-            //lblResultadoCc.Text = "--";
+            lblResultadoCc.Text = "--";
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            lblResultadoCc.Text = "";
+
             CalcVM = new CalculoVM();
             try
             {
                 double diametro = double.Parse(entryDiametro.Text);
                 double curso = double.Parse(entryCurso.Text);
-                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString("##.#");
+                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString("#.##");
             }
             catch (Exception ex)
             {
                 App.Current.MainPage.DisplayAlert("Erro", $"{ex.Message}", "Ok");
             }
+            btnCalc.Focus();
         }
 
 

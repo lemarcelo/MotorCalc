@@ -21,6 +21,8 @@ namespace MotorCalc.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+
+            lblResultadoCompr.Text = "";
             double cilindrada = double.Parse(entryCilindrada.Text);
             double volume = double.Parse(entryVolume.Text);
 
@@ -33,6 +35,7 @@ namespace MotorCalc.Views
             {
                 lblResultadoCompr.Text = ((cilindrada + volume) / volume).ToString("#,##");
             }
+            btnCalc.Focus();
         }
     }
 }
