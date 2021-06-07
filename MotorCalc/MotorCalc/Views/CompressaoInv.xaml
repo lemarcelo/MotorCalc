@@ -39,7 +39,7 @@
                 
                 <Button Text="Calcular" 
                         Margin="40,0,40,0" 
-                        Command="{Binding CompressaoCalc}"/>
+                        Clicked="Button_Clicked"/>
                 
             </StackLayout>
         </ContentPage.Content>

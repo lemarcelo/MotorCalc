@@ -18,5 +18,21 @@ namespace MotorCalc.Views
             BindingContext = new ViewModels.CalculoVM();
             lblResultadoCompr.Text = "--";
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            double cilindrada = double.Parse(entryCilindrada.Text);
+            double volume = double.Parse(entryVolume.Text);
+
+
+            if (cilindrada < 1 || volume < 1)
+            {
+                lblResultadoCompr.Text = "--";
+            }
+            else
+            {
+                lblResultadoCompr.Text = ((cilindrada + volume) / volume).ToString("#,##");
+            }
+        }
     }
 }
