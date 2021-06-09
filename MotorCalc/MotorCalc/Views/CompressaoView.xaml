@@ -32,8 +32,7 @@
                            FontAttributes="Bold" 
                            Keyboard="Numeric" 
                            Placeholder="Cilindrada" 
-                           FontSize="Title" 
-                           Text="{Binding Cilindrada}"/>
+                           FontSize="Title"/>
                     
                     <Entry x:Name="entryVolume" 
                            TextColor="NavajoWhite" 
@@ -42,8 +41,7 @@
                            FontAttributes="Bold" 
                            Keyboard="Numeric"
                            Placeholder="Volume da Camara" 
-                           FontSize="Title" 
-                           Text="{Binding Volume}"/>
+                           FontSize="Title"/>
                     
                     <Button BackgroundColor="GhostWhite" 
                             TextColor="Gray" 
