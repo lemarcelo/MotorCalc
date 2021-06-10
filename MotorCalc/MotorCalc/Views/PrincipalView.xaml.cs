@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MotorCalc.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PrincipalView : Shell
+    public partial class PrincipalView : TabbedPage
     {
         public PrincipalView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.PrincipalVM();
             Routing.RegisterRoute("volume", typeof(CompressaoInv));
 
         }

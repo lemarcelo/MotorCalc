@@ -8,26 +8,27 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--<Color x:Key="Primary">#CC000000</Color>-->
-            <!--<Color x:Key="Primary">#081F30</Color>-->
+            <Color x:Key="Primary">#081F30</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
-                <!--<Setter Property="VisualStateManager.VisualStateGroups">
+                <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    --><!--<Setter Property="BackgroundColor" Value="#CC000000" />--><!--
+                                    <!--<Setter Property="BackgroundColor" Value="#CC000000" />-->
                                     <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Disabled">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                    <!--<Setter Property="BackgroundColor" Value="#332196F3" />-->
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
                     </VisualStateGroupList>
-                </Setter>-->
+                </Setter>
             </Style>
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundImageSource" Value="sem_limites.png" />

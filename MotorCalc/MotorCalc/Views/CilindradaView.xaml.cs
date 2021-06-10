@@ -14,7 +14,6 @@ namespace MotorCalc.Views
     public partial class CilindradaView : Shell
     {
         //#60D2B48C hexadecimal transparente transparent
-        CalculoVM CalcVM{ get; set; }
         public CilindradaView()
         {
             InitializeComponent();

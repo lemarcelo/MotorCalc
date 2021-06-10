@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using FFImageLoading;
+using Android.Graphics;
 
 namespace MotorCalc.Droid
 {
@@ -14,7 +15,7 @@ namespace MotorCalc.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             //StatusBar Transparente
-            Window.SetStatusBarColor(Android.Graphics.Color.Transparent);
+            Window.SetStatusBarColor(Color.Rgb(8, 31, 48));
             //Status Bar RGB Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0));
 
             base.OnCreate(savedInstanceState);
