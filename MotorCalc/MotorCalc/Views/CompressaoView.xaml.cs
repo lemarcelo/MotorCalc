@@ -21,9 +21,24 @@ namespace MotorCalc.Views
             lblResultadoCompr.Text = "--";
         }
 
+
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.DisplayAlert("Alerta!", "Em Desenvolvimento...", "Ok");
+
+            lblResultadoCompr.Text = "";
+            double cilindrada = double.Parse(entryCilindrada.Text);
+            double volume = double.Parse(entryVolume.Text);
+
+
+            if (cilindrada < 1 || volume < 1)
+            {
+                lblResultadoCompr.Text = "--";
+            }
+            else
+            {
+                lblResultadoCompr.Text = ((cilindrada + volume) / volume).ToString("#,##");
+            }
+            btnCalc.Focus();
         }
     }
 }

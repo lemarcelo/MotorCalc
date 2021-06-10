@@ -42,8 +42,9 @@
                            Keyboard="Numeric"
                            Placeholder="Volume da Camara" 
                            FontSize="Title"/>
-                    
-                    <Button BackgroundColor="GhostWhite" 
+
+                    <Button x:Name="btnCalc"
+                        BackgroundColor="GhostWhite" 
                             TextColor="Gray" 
                             BorderColor="Black" 
                             BorderWidth="2" 
@@ -54,7 +55,7 @@
                     <Button BackgroundColor="GhostWhite" 
                             TextColor="Gray" 
                             BorderColor="Black" 
-                            BorderWidth="2" 
+                            BorderWidth="2"     
                             CornerRadius="10" 
                             Text="Descobrir Volume" 
                             Margin="40,0,40,0" 
