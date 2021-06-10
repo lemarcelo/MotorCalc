@@ -15,7 +15,6 @@ namespace MotorCalc.Views
         public CompressaoView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.CalculoVM();
             entryCilindrada.Text = string.Empty;
             entryVolume.Text = string.Empty;
             lblResultadoCompr.Text = "--";
@@ -24,21 +23,27 @@ namespace MotorCalc.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
-            lblResultadoCompr.Text = "";
-            double cilindrada = double.Parse(entryCilindrada.Text);
-            double volume = double.Parse(entryVolume.Text);
-
-
-            if (cilindrada < 1 || volume < 1)
+            try
             {
-                lblResultadoCompr.Text = "--";
+                lblResultadoCompr.Text = "";
+
+                double cilindrada = double.Parse(entryCilindrada.Text);
+                double volume = double.Parse(entryVolume.Text);
+
+                if (cilindrada < 1 || volume < 1)
+                {
+                    lblResultadoCompr.Text = "--";
+                }
+                else
+                {
+                    lblResultadoCompr.Text = ((cilindrada + volume) / volume).ToString("N2");
+                }
+                btnCalc.Focus();
             }
-            else
+            catch (Exception)
             {
-                lblResultadoCompr.Text = ((cilindrada + volume) / volume).ToString("#,##");
+                App.Current.MainPage.DisplayAlert("Erro", $"Verifique os campos", "Ok");
             }
-            btnCalc.Focus();
         }
     }
 }

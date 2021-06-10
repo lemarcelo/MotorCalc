@@ -21,9 +21,9 @@
                            VerticalOptions="CenterAndExpand" 
                            HorizontalOptions="CenterAndExpand" >
 
-                        <Label.Behaviors>
+                        <!--<Label.Behaviors>
                             <behavior:DoubleBehavior Text="{Binding ResultadoCompr, Mode=TwoWay}"/>
-                        </Label.Behaviors>
+                        </Label.Behaviors>-->
                     </Label>
                     <Entry x:Name="entryCilindrada" 
                            TextColor="NavajoWhite" 
@@ -50,7 +50,7 @@
                             BorderWidth="2" 
                             CornerRadius="10" Text="Calcular" 
                             Margin="20,20,20,20" 
-                            Command="{Binding CompressaoCalc}"/>
+                            Clicked="Button_Clicked" />
                     
                     <Button BackgroundColor="GhostWhite" 
                             TextColor="Gray" 
@@ -58,8 +58,7 @@
                             BorderWidth="2"     
                             CornerRadius="10" 
                             Text="Descobrir Volume" 
-                            Margin="40,0,40,0" 
-                            Clicked="Button_Clicked" />
+                            Margin="40,0,40,0" />
                         <!--Command="{Binding VolumeCalc}"-->
                 </StackLayout>
             </Frame>

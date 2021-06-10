@@ -26,18 +26,16 @@ namespace MotorCalc.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            lblResultadoCc.Text = "";
-
-            CalcVM = new CalculoVM();
             try
             {
+            lblResultadoCc.Text = "";
                 double diametro = double.Parse(entryDiametro.Text);
                 double curso = double.Parse(entryCurso.Text);
-                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString("#.##");
+                lblResultadoCc.Text = (diametro * diametro * 3.14159 * curso / 4000).ToString("N2");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                App.Current.MainPage.DisplayAlert("Erro", $"{ex.Message}", "Ok");
+                App.Current.MainPage.DisplayAlert("Erro", $"Verifique os campos", "Ok");
             }
             btnCalc.Focus();
         }
