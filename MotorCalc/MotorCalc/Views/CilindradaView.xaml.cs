@@ -21,6 +21,9 @@ namespace MotorCalc.Views
             entryDiametro.Text = string.Empty;
             entryCurso.Text = string.Empty;
             lblResultadoCc.Text = "--";
+
+            entryDiametro.Completed += (sender, e) => entryCurso.Focus();
+            entryCurso.Completed += (sender, e) => Button_Clicked(sender, e);
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -38,7 +41,10 @@ namespace MotorCalc.Views
             }
             btnCalc.Focus();
         }
-
+        void Foco()
+        {
+            entryCurso.Focus();
+        }
 
 
         //public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

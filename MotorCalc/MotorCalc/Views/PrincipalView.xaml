@@ -12,21 +12,8 @@
             UnselectedTabColor="Gray"
             BackgroundImageSource="sem_limites.jpg">
 
-        <!--
-        ForegroundColor="White"
-        TitleColor="White"
-        DisabledColor="#B4FFFFFF"
-        UnselectedColor="#95FFFFFF"-->
-
-
     <local:CilindradaView Title="Cilindrada" />
     <local:CompressaoView Title="Compressao" />
     
-    <!--<MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle"  />-->
-
-    <!--<FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Cilindrada" Route="ItemsPage" ContentTemplate="{DataTemplate local:CilindradaView}" />
-        <ShellContent Title="Compressao" Route="AboutPage" ContentTemplate="{DataTemplate local:CompressaoView}" />
-    </FlyoutItem>-->
 
 </TabbedPage>

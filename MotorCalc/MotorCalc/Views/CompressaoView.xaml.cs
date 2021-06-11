@@ -18,6 +18,10 @@ namespace MotorCalc.Views
             entryCilindrada.Text = string.Empty;
             entryVolume.Text = string.Empty;
             lblResultadoCompr.Text = "--";
+
+
+            entryCilindrada.Completed += (sender, e) => entryVolume.Focus();
+            entryVolume.Completed += (sender, e) => Button_Clicked(sender, e);
         }
 
 

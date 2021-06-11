@@ -41,7 +41,7 @@
                            FontAttributes="Bold" 
                            Keyboard="Numeric"
                            Placeholder="Volume da Camara" 
-                           FontSize="Title"/>
+                           FontSize="Title" />
 
                     <Button x:Name="btnCalc"
                         BackgroundColor="GhostWhite" 
