@@ -2,7 +2,7 @@
 <Shell  xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="MotorCalc.Views.CilindradaView"
-        xmlns:behavior="clr-namespace:MotorCalc.Behaviors"
+        xmlns:behavior="clr-namespace:MotorCalc.Services"
         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
         xmlns:controllers="clr-namespace:MotorCalc.Controllers"
         xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
@@ -30,9 +30,6 @@
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand">
                         
-                        <Label.Behaviors>
-                            <behavior:DoubleBehavior Text="{Binding ResultadoCc, Mode=TwoWay}" />
-                        </Label.Behaviors>
                     </Label>
                     <Entry     Keyboard="Numeric"
                                x:Name="entryDiametro" 
@@ -52,7 +49,11 @@
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
                                Placeholder="Curso" 
-                               FontSize="Title" />
+                               FontSize="Title" >
+                        <Entry.Behaviors>
+                            <behavior:Calc />
+                        </Entry.Behaviors>
+                    </Entry>
                     <!--NumericValue="{Binding medida.Curso}"-->
 
                     <Button x:Name="btnCalc"

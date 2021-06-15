@@ -49,5 +49,6 @@ namespace MotorCalc.Views
                 App.Current.MainPage.DisplayAlert("Erro", $"Verifique os campos", "Ok");
             }
         }
+        
     }
 }
