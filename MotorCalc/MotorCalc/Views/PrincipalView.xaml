@@ -14,6 +14,7 @@
 
     <local:CilindradaView Title="Cilindrada" />
     <local:CompressaoView Title="Compressao" />
+    <local:MedidasView Title="Compressao" />
     
 
 </TabbedPage>
