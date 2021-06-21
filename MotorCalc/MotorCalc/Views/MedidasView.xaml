@@ -3,12 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MotorCalc.Views.MedidasView">
     <ContentPage.Content>
-        <ListView >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding ListMedidas(1)}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Relação de Peças"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="NavajoWhite"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+                <ListView Resources="{Binding ReturnMedidas}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

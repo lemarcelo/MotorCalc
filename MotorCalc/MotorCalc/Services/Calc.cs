@@ -23,7 +23,7 @@ namespace MotorCalc.Services
 
         public void CalcCc( object sender, TextChangedEventArgs args)
         {
-            App.Current.MainPage.DisplayAlert("Erro", $"Verifique os campos", $"Ok");
+            //App.Current.MainPage.DisplayAlert("Erro", $"Verifique os campos", $"Ok");
         }
 
     }

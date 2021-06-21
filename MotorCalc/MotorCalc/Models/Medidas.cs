@@ -6,20 +6,28 @@ namespace MotorCalc.Models
 {
     public class Medidas
     {
-        private double _Pistao;
+        private string _Descricao;
 
-        public double Pistao
+        public string Descricao
         {
-            get { return _Pistao; }
-            set { _Pistao = value; }
+            get { return _Descricao; }
+            set { _Descricao = value; }
         }
 
-        private double _Cilindro;
+        private double _DiametroP;
 
-        public double Cilindro
+        public double DiametroP
         {
-            get { return _Cilindro; }
-            set { _Cilindro = value; }
+            get { return _DiametroP; }
+            set { _DiametroP = value; }
+        }
+
+        private double __Curso;
+
+        public double Curso
+        {
+            get { return __Curso; }
+            set { __Curso = value; }
         }
 
     }
