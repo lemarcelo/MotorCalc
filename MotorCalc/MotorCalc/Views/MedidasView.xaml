@@ -17,16 +17,26 @@
                 <ListView
                     x:Name="lvMedidas"
                     ItemsSource="{Binding CollectionMedidas}"
-                    CachingStrategy="RecycleElement"
-                    RowHeight="60">
+                    HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout >
-                                    <Label Text="{Binding Descricao}" FontAttributes="Bold" FontSize="20"/>
-                                    <Label Text="{Binding DiametroP}" FontAttributes="Bold" FontSize="20" />
-                                    <Label Text="{Binding Curso}" FontAttributes="Bold" FontSize="20" />
-                                </StackLayout>
+                                <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Descricao}" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="20" />
+                                        <Label Grid.Row="1" Text="{Binding DiametroP}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="20" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Curso}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="20"  />
+                                    </Grid>
+                                </ScrollView>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
