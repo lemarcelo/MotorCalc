@@ -12,5 +12,9 @@ namespace MotorCalc.Views
             InitializeComponent();
             BindingContext = new MedidasViewModel();
         }
+
+        private void lvMedidas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+        }
     }
 }

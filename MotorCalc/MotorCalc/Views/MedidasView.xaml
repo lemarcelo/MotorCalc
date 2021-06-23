@@ -13,9 +13,10 @@
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand" />
                 
-                
                 <ListView
                     x:Name="lvMedidas"
+                    SelectionMode="Single"
+                    ItemSelected="lvMedidas_ItemSelected"
                     ItemsSource="{Binding CollectionMedidas}"
                     HasUnevenRows="True">
                     <ListView.ItemTemplate>

@@ -19,7 +19,7 @@ namespace MotorCalc.ViewModels
         public MedidasViewModel()
         {
             CollectionMedidas = new ObservableCollection<Medidas>();
-            CollectionMedidas.Add(new Medidas() { Descricao = "Titan 125", DiametroP = "56,5", Curso = "49,5" });
+            CollectionMedidas.Add(new Medidas() { DiametroP = "Diâmetro Pistão", Curso = "Curso Vb." });
             CollectionMedidas.Add(new Medidas() { Descricao = "Titan 150", DiametroP = "57,3", Curso = "57,8" });
             CollectionMedidas.Add(new Medidas() { Descricao = "Titan 150 Kit 190cc", DiametroP = "64,5", Curso = "57,8" });
             CollectionMedidas.Add(new Medidas() { Descricao = "Titan 150 Kit Setentão 225cc", DiametroP = "70", Curso = "57,8" });
