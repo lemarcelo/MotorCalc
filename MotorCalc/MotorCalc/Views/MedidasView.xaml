@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MotorCalc.Views"
              x:Class="MotorCalc.Views.MedidasView">
     <ContentPage.Content>
         <Frame CornerRadius="10" Margin="20,20,20,20" BackgroundColor="#CC708090" >
@@ -11,13 +12,28 @@
                        TextColor="NavajoWhite"
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand" />
-                <ListView Resources="{Binding ReturnMedidas}">
+                
+                
+                <ListView
+                    x:Name="lvMedidas"
+                    ItemsSource="{Binding CollectionMedidas}"
+                    CachingStrategy="RecycleElement"
+                    RowHeight="60">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Text="{Binding .}" />
+                            <ViewCell>
+                                <StackLayout >
+                                    <Label Text="{Binding Descricao}" FontAttributes="Bold" FontSize="20"/>
+                                    <Label Text="{Binding DiametroP}" FontAttributes="Bold" FontSize="20" />
+                                    <Label Text="{Binding Curso}" FontAttributes="Bold" FontSize="20" />
+                                </StackLayout>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
+                
+                
             </StackLayout>
         </Frame>
     </ContentPage.Content>

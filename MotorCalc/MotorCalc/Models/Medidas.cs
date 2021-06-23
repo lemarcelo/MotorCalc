@@ -14,20 +14,18 @@ namespace MotorCalc.Models
             set { _Descricao = value; }
         }
 
-        private double _DiametroP;
-
-        public double DiametroP
+        private string _DiametroP;
+        public string DiametroP
         {
             get { return _DiametroP; }
             set { _DiametroP = value; }
         }
 
-        private double __Curso;
-
-        public double Curso
+        private string _Curso;
+        public string Curso
         {
-            get { return __Curso; }
-            set { __Curso = value; }
+            get { return _Curso; }
+            set { _Curso = value; }
         }
 
     }
