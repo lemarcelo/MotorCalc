@@ -16,7 +16,7 @@
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand" />
                     <Label x:Name="lblResultadoCompr"
-                           FontSize="90"
+                           FontSize="70"
                            TextColor="White"
                            VerticalOptions="CenterAndExpand" 
                            HorizontalOptions="CenterAndExpand" >
@@ -32,7 +32,7 @@
                            FontAttributes="Bold" 
                            Keyboard="Numeric" 
                            Placeholder="Cilindrada" 
-                           FontSize="Title"/>
+                           FontSize="20"/>
                     
                     <Entry x:Name="entryVolume" 
                            TextColor="NavajoWhite" 
@@ -41,7 +41,7 @@
                            FontAttributes="Bold" 
                            Keyboard="Numeric"
                            Placeholder="Volume da Camara" 
-                           FontSize="Title" />
+                           FontSize="20" />
 
                     <Button x:Name="btnCalc"
                         BackgroundColor="GhostWhite" 

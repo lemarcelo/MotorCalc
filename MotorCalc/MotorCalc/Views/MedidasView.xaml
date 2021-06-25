@@ -12,17 +12,27 @@
                        TextColor="NavajoWhite"
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand" />
-                
+                <Grid Padding="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Diâmetro Pistão" Grid.Column="0" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="22" />
+                    <Label Text="Curso Vb." Grid.Column="1" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="22" />
+
+                </Grid>
                 <ListView
                     x:Name="lvMedidas"
                     SelectionMode="Single"
+                    SeparatorColor="Orange"
                     ItemSelected="lvMedidas_ItemSelected"
                     ItemsSource="{Binding CollectionMedidas}"
                     HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <!--<ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">-->
+                                <StackLayout>
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
@@ -33,18 +43,17 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Descricao}" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="20" />
-                                        <Label Grid.Row="1" Text="{Binding DiametroP}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="20" />
-                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Curso}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="20"  />
+                                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Descricao}" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="15" />
+                                        <Label Grid.Row="1" Text="{Binding DiametroP}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Curso}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15"  />
                                     </Grid>
-                                </ScrollView>
+
+                                </StackLayout>
+                                <!--</ScrollView>-->
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
-                
-                
             </StackLayout>
         </Frame>
     </ContentPage.Content>

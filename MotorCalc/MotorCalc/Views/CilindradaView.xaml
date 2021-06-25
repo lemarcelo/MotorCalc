@@ -25,7 +25,7 @@
                     
                     <!--StringFormat='{0:#,0.0}'-->
                     <Label x:Name="lblResultadoCc"
-                               FontSize="90"
+                               FontSize="70"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand">
@@ -38,7 +38,7 @@
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
                                Placeholder="Diametro do pistão"
-                               FontSize="Title" 
+                               FontSize="20" 
                                />
                     <!--Text="{Binding medida.Diametro}"-->
 
@@ -49,7 +49,7 @@
                                HorizontalTextAlignment="Center" 
                                FontAttributes="Bold" 
                                Placeholder="Curso" 
-                               FontSize="Title" >
+                               FontSize="20" >
                         <Entry.Behaviors>
                             <behavior:Calc />
                         </Entry.Behaviors>
