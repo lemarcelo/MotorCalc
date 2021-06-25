@@ -12,14 +12,16 @@
                        TextColor="NavajoWhite"
                        VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand" />
-                <Grid Padding="9">
+                <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Text="Diâmetro Pistão" Grid.Column="0" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="22" />
-                    <Label Text="Curso Vb." Grid.Column="1" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="22" />
-
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Diâmetro" Grid.Column="0" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="16" />
+                    <Label Text="Curso Vb." Grid.Column="1" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="16" />
                 </Grid>
                 <ListView
                     x:Name="lvMedidas"

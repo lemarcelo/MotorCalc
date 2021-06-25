@@ -25,7 +25,7 @@
                     
                     <!--StringFormat='{0:#,0.0}'-->
                     <Label x:Name="lblResultadoCc"
-                               FontSize="70"
+                               FontSize="60"
                                TextColor="White"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand">
