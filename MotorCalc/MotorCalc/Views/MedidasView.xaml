@@ -20,8 +20,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Label Text="Diâmetro" Grid.Column="0" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="16" />
-                    <Label Text="Curso Vb." Grid.Column="1" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="16" />
+                    <Label Text="Diâmetro" Grid.Column="0" FontAttributes="Bold" TextColor="DarkOrange" FontSize="16" />
+                    <Label Text="Curso Vb." Grid.Column="1" FontAttributes="Bold" TextColor="DarkOrange" FontSize="16" />
                 </Grid>
                 <ListView
                     x:Name="lvMedidas"
@@ -45,7 +45,7 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Descricao}" FontAttributes="Bold" TextColor="NavajoWhite" FontSize="15" />
+                                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Descricao}" FontAttributes="Bold" TextColor="Orange" FontSize="15" />
                                         <Label Grid.Row="1" Text="{Binding DiametroP}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15" />
                                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding Curso}" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15"  />
                                     </Grid>
