@@ -31,5 +31,13 @@ namespace MotorCalc.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        public class AndroidInitializer : Prism.IPlatformInitializer
+        {
+            public void RegisterTypes(Prism.Ioc.IContainerRegistry containerRegistry)
+            {
+
+            }
+        }
     }
 }

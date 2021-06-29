@@ -28,4 +28,11 @@ namespace MotorCalc.iOS
             return base.FinishedLaunching(app, options);
         }
     }
+    public class IOSInitializer : Prism.IPlatformInitializer
+    {
+        public void RegisterTypes(Prism.Ioc.IContainerRegistry containerRegistry)
+        {
+
+        }
+    }
 }
