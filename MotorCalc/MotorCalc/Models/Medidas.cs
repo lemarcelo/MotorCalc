@@ -14,6 +14,12 @@ namespace MotorCalc.Models
             set { _Descricao = value; }
         }
 
+        private string _PinoP;
+        public string PinoP
+        {
+            get { return _PinoP; }
+            set { _PinoP = value; }
+        }
         private string _DiametroP;
         public string DiametroP
         {
