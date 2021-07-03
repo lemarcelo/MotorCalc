@@ -20,8 +20,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Label Text="Pino" Grid.Column="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="DarkOrange" FontSize="16" />
-                    <Label Text="Diâmetro" Grid.Column="1" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="DarkOrange" FontSize="16" />
+                    <Label Text="Pino" Grid.Column="1" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="DarkOrange" FontSize="16" />
+                    <Label Text="Diâmetro" Grid.Column="0" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="DarkOrange" FontSize="16" />
                     <Label Text="Curso Vb." Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="DarkOrange" FontSize="16" />
                 </Grid>
                 <ListView
@@ -47,8 +47,8 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Descricao}" FontAttributes="Bold" TextColor="orange" FontSize="15" />
-                                        <Label Grid.Row="1" Grid.ColumnSpan="1" Text="{Binding PinoP}" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15" />
-                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding DiametroP}" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15" />
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding DiametroP}" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding PinoP}" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15" />
                                         <Label Grid.Row="1" Grid.Column="2" Text="{Binding Curso}" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="WhiteSmoke" FontSize="15"  />
                                     </Grid>
                                 </StackLayout>
